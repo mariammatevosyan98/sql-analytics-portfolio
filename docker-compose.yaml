@@ -1,7 +1,7 @@
 services:
   db:
     container_name: postgresql_db_aca
-    image: postgres:17
+    image: postgis/postgis:17-3.4
     restart: always
     env_file: .env
     environment:
@@ -22,6 +22,7 @@ services:
       - ./init:/docker-entrypoint-initdb.d
       # Make CSVs available to COPY during init (read-only)
       - ./data:/docker-entrypoint-initdb.d/data:ro
+      - ./data/analytics_schema:/data:ro
 
   pgadmin:
     container_name: pgadmin_aca
