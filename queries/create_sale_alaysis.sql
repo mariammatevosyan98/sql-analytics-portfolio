@@ -1,8 +1,9 @@
-CREATE TABLE IF NOT EXISTS sales_analysis AS
+CREATE TABLE sales_analysis AS
 SELECT
     s.transaction_id,
 
     o.order_date,
+    DATE(o.order_date) AS order_date_date,
     o.year,
     o.quarter,
     o.month,
@@ -15,14 +16,13 @@ SELECT
     p.category,
     p.price,
 
-    e.first_name  AS employee_first_name,
-    e.last_name   AS employee_last_name,
-    e.salary      AS employee_salary,
+    e.first_name AS employee_first_name,
+    e.last_name  AS employee_last_name,
+    e.salary     AS employee_salary,
 
     s.quantity,
     s.discount,
     s.total_sales
-
 FROM sales AS s
 JOIN orders AS o
     ON s.order_id = o.order_id
