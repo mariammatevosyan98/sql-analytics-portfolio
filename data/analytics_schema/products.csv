@@ -1,0 +1,9 @@
+product_id,product_name,category,price
+1,Mobile Basic,Mobile,9.99
+2,Mobile Unlimited,Mobile,24.99
+3,Home Internet Basic,Internet,14.99
+4,Home Internet Premium,Internet,29.99
+5,TV Starter,TV,11.99
+6,TV Full,TV,19.99
+7,Streaming Service,Entertainment,7.99
+8,Cloud Storage 100GB,Cloud,2.99
